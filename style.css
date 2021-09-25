@@ -1,0 +1,86 @@
+body {
+    background: #c2dcfa;
+}
+#inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	width:350px;
+	height:200px;
+	background-color:#FFF;
+	margin-left:auto;
+    margin-right:auto;
+	text-align:center;
+	padding:10px;
+    border-radius: 5px;
+    box-shadow: black 0.5em 0.5em 0.7em
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url(./img/background.png);
+    background-repeat: repeat-x;
+    animation: slideright 80s infinite linear;
+    width: 99vw;
+    height: 225px;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 5000%;
+    }
+    to{
+        background-position: 0;
+    }
+}
+
+.dino {
+    width: 100px;
+    height: 60px;
+    bottom: 0px;
+    position: absolute;
+    background-image:url(./img/dino-gamesprite01.png);
+	animation:play .6s steps(9) infinite;
+
+    -webkit-animation: play .6s steps(9) infinite;
+    -moz-animation: play .6s steps(9) infinite;
+    -ms-animation: play .6s steps(9) infinite;
+    -o-animation: play .6s steps(9) infinite;
+}
+
+@keyframes play {
+	from {background-position:0px;}
+	to {background-position:-1018px;}
+}
+
+.pedras {
+    width: 33px;
+    height: 30px;
+    bottom: 0px;
+    position: absolute;
+    float: right;
+    background-image:url(./img/pedra.png);
+}
+
+.fim {
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #852828;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-over {
+    width:172px;
+	height:129px;
+    background-image: url(./img/dino-gameover.png);
+}
+
+
+
